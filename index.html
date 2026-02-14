@@ -1,0 +1,523 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="x-poe-datastore-behavior" content="local_only"><meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://code.jquery.com https://unpkg.com https://d3js.org https://threejs.org https://cdn.plot.ly https://stackpath.bootstrapcdn.com https://maps.googleapis.com https://cdn.tailwindcss.com https://ajax.googleapis.com https://kit.fontawesome.com https://cdn.datatables.net https://maxcdn.bootstrapcdn.com https://code.highcharts.com https://tako-static-assets-production.s3.amazonaws.com https://www.youtube.com https://fonts.googleapis.com https://fonts.gstatic.com https://pfst.cf2.poecdn.net https://puc.poecdn.net https://i.imgur.com https://wikimedia.org https://*.icons8.com https://*.giphy.com https://picsum.photos https://images.unsplash.com; frame-src 'self' https://www.youtube.com https://trytako.com; child-src 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests; block-all-mixed-content;">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>葡京人酒店 - 房务部资讯</title>
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAFjElEQVR42uWXXWwcVxXHf/fO7O7Mrr3e7Dqx12tn7ThtcFKlVHVDlCJUiIBWxW3VSC0FnoA+IPEEVEJ9QYpAqgC1fajES9UKgZpgoFWJBBVBbUOsuA2Jg6OWOG78EbfZfPlr7d3Zj9m5hwfboqXe2IFUQeJIV/Ny7r3/c/7n/OdcJSLCTTTNTbZPBIDcbABq+WvWwa7+JKIPTI2KX0Urtaa/fSMvD4IAy7J45mA/n2pLU928kV2pDJmmBIhiNTw3LAOBCVCWRdH3WZz6Cz9/rZ9Tkyfx/AIKhdSpjBsGwNIWulzl0O9/w1sxzZ6dZU5fybG//yXy+TxKwWodr/97zpcOPZEb541fP80LJ99EjduMLMRwapO8OjjIB7kPlrJwowEYY1Aonv3Vizz8o+/xM3+Uw6kGmsNhBi5b7E7ZPHGH5pmXX0HEoFYpAvta1SxmaZOqU80r0SfjcUKLFW5Jd3PP1ihnZyb5ru0xPB0haEjyt+PHmczl6Mq0Y4xBa702AAUoXT9BIoJWGkR47P4HuOvTvWzLtFCYPcmjhybon3MoVGy2pxTJVISCV15fEa7wVKn5/PT5X/DEU/tZLHmICCIGxCwBXMmMUoTsED3ZLNp2OCNZzs8ZXKPYIgHTtTCtsSLHhv++qkp+DMCKej3/u4McHvgrG+JNVKvV5cv00hKYKRR4f/oqtelZAm+aincJEIYuTVKqlIiFFfGo8GSHRyjZTCzW8BGVrEuBtZz2N94e5Jv7HuWxvoeWkJsA5o7gTQ7jD1c4+t5VZvMlHuhqxOqpEu8WBq0H+cGbR/DE5Z6o4ZGMzwtjZbbt/ArfuO9ejHyU/1UBiDEorYm5UWbz8wA8ffx1Dp07zZ96NRF1gtKGJHuiPsq10O0FnM0GSxzOXniL+2Pv85nNYS5VaryYS3FntoPdrUlEBMU6usAAFtC394u8dPAAZNv4/pGXaSsFPNv2eX54y+eIlQYo3pWCisJtncPVccbsXl4ff5v5WoSnzttMlxza4zbpqI0vglIKI7I+CkSEfXu/jA6EH7/yW1QywtVElOeODtLk3M13uu/DWRiB4gykbudUKc23BiYYnTJsCoVZ1IbmhhDf3raF/nMjPB5Lfai51do6oNSSaj38pXv5c22S8XeHSFg2eUvxk8MDHOjs4uvZDHe78Nw7jbx2ZgivsEhjNIwTDWgpaqYKHocvXKQn0URNVN05wb7WT90Ygzd2mY0KXNugI7BYszjx3jnylwyXtxgOnLqCjoXQkQjFiCFdgTNaoVA0OxH+MT/Hg9tblo+8HiUU0FoTmalyYaFMqb2RrKrSaQsjrkPZFVojFXTcZUELxgi3GcUVW6HLBiyLV8cmsGyhszH+Hwwky3oQc12s81dotgzRsGLMtyjgM1oog19gPvAw1Qr4Po6UKJV9TMjGGGGjY5MWn+H5Qt0Jac2BpCnRROtikbmJq3S1b2JkMU/frj18devtdFZP0ud7nM2XcHVAzwaX8MUyufHTZBvTxFu7GB46QYvrXv9EtII13dpMa0eYbLKD+VpAx4LHQ107+NqOXqCXP9yxHJkJ0JbNsXfe5fFTA+zYvJM923sZOnaUZMhZVQXXRYETSzAwE/Bk3z6yt95KteDR0dBEYAy+CRBAK4WylmLZ2dXJbCmKY8XobsuQSzTQEI2ttNf1zwPpSJQ7w3E+23Mbe7PbqLVvYmsihaU1ltKoD2VLRGiIxfhCOkNXU4LujS10tmVIRZy6l9WlYGWi3aVD/DLVTthxeKQWYXfO0OZVIfmvA/89rv3JNlwdoTlQ/PF8hfZiBZKrU4DUM2NERKS2sCDl0VExxkhQLEplbFyCSkWuZdWpKalevCjGGKmOT0hQKtX1Vf/7b0MRMOZjxbnmnhW/NfzV//3r+J8McbTStOs30wAAAABJRU5ErkJggg==">
+    <link rel="apple-touch-icon" href="data:image/png;base64,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">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="葡京人房务">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #9DC183;
+            --primary-dark: #7BA05B;
+            --bg-color: #F8F9F6;
+            --card-bg: #FFFFFF;
+            --text-primary: #2D2D2D;
+            --text-secondary: #555555;
+            --border-color: #E2E8D8;
+            --font-base: 18px;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background-color: var(--bg-color); color: var(--text-primary); line-height: 1.7; font-size: var(--font-base); }
+        .header { background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%); color: white; padding: 18px 16px; position: sticky; top: 0; z-index: 100; }
+        .header-content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+        .hotel-name-zh { font-size: 1.6rem; font-weight: 700; letter-spacing: 2px; }
+        .hotel-name-en { font-size: 1rem; opacity: 0.9; }
+        .subtitle { font-size: 0.95rem; opacity: 0.85; margin-top: 4px; }
+        .lang-switcher { display: flex; background: rgba(255,255,255,0.2); border-radius: 25px; padding: 4px; }
+        .lang-btn { padding: 10px 18px; border: none; background: transparent; color: white; cursor: pointer; border-radius: 22px; font-size: 1rem; font-weight: 600; }
+        .lang-btn.active { background: white; color: var(--primary-dark); }
+        .nav-tabs { background: white; border-bottom: 2px solid var(--border-color); overflow-x: auto; -webkit-overflow-scrolling: touch; position: sticky; top: 80px; z-index: 99; }
+        .nav-tabs::-webkit-scrollbar { display: none; }
+        .nav-tabs-inner { display: flex; padding: 0 8px; }
+        .nav-tab { padding: 16px 12px; border: none; background: transparent; color: var(--text-secondary); cursor: pointer; font-size: 1rem; font-weight: 600; white-space: nowrap; border-bottom: 4px solid transparent; display: flex; align-items: center; gap: 6px; }
+        .nav-tab.active { color: var(--primary-dark); border-bottom-color: var(--primary-color); }
+        .nav-tab .icon { font-size: 1.3rem; }
+        .main-content { padding: 18px; }
+        .section { display: none; }
+        .section.active { display: block; }
+        .card { background: var(--card-bg); border-radius: 16px; padding: 22px; margin-bottom: 18px; box-shadow: 0 3px 15px rgba(0,0,0,0.08); }
+        .card-title { font-size: 1.4rem; font-weight: 700; color: var(--primary-dark); margin-bottom: 18px; display: flex; align-items: center; gap: 10px; }
+        .search-box { position: relative; margin-bottom: 18px; }
+        .search-box input { width: 100%; padding: 16px 20px 16px 50px; border: 2px solid var(--border-color); border-radius: 12px; font-size: 1.1rem; }
+        .search-box input:focus { outline: none; border-color: var(--primary-color); }
+        .search-box .search-icon { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); font-size: 1.3rem; }
+        .tv-note { background: #FFF3E0; border-left: 5px solid #FF9800; padding: 16px 18px; border-radius: 0 12px 12px 0; margin-bottom: 18px; font-size: 1.05rem; color: #E65100; font-weight: 500; }
+        .channel-grid { display: grid; grid-template-columns: 1fr; gap: 10px; max-height: 450px; overflow-y: auto; }
+        .channel-item { display: flex; align-items: center; padding: 14px 16px; background: var(--bg-color); border-radius: 10px; }
+        .channel-number { background: var(--primary-color); color: white; width: 42px; height: 42px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.1rem; margin-right: 16px; flex-shrink: 0; }
+        .channel-name { font-size: 1.1rem; font-weight: 500; }
+        .service-box { background: linear-gradient(135deg, #F5F9F0 0%, #EDF5E4 100%); border-left: 5px solid var(--primary-color); padding: 18px 20px; border-radius: 0 14px 14px 0; margin-bottom: 16px; }
+        .service-title { font-weight: 700; color: var(--primary-dark); margin-bottom: 12px; font-size: 1.15rem; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+        .service-details { color: var(--text-secondary); font-size: 1.05rem; padding-left: 24px; }
+        .service-details li { margin-bottom: 8px; line-height: 1.6; }
+        .express-badge { background: var(--primary-dark); color: white; padding: 4px 10px; border-radius: 6px; font-size: 0.9rem; font-weight: 700; }
+        .time-warning { display: block; background: #FF6B6B; color: white; padding: 14px 18px; border-radius: 10px; font-size: 1.15rem; font-weight: 700; margin-top: 12px; text-align: center; animation: pulse 2s infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.85; } }
+        .accordion { margin-bottom: 14px; border: 2px solid var(--border-color); border-radius: 14px; overflow: hidden; }
+        .accordion.hotel-owned { border-left: 5px solid var(--primary-color); }
+        .accordion-header { background: white; padding: 18px 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .accordion-header:hover { background: #F9FBF7; }
+        .accordion-header .title { font-weight: 700; color: var(--text-primary); font-size: 1.15rem; display: flex; align-items: center; gap: 12px; }
+        .accordion-header .title .num { background: var(--primary-color); color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1rem; font-weight: 700; }
+        .accordion-header .badge { background: var(--primary-color); color: white; font-size: 0.85rem; padding: 4px 10px; border-radius: 6px; font-weight: 600; }
+        .accordion-header .arrow { font-size: 1rem; color: var(--text-secondary); transition: transform 0.3s; }
+        .accordion.open .accordion-header .arrow { transform: rotate(180deg); }
+        .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; background: #FAFCF8; }
+        .accordion.open .accordion-content { max-height: 600px; }
+        .product-img-wrapper { text-align: center; margin-bottom: 14px; }
+        .product-img-wrapper img { max-height: 120px; border-radius: 10px; border: 2px solid var(--border-color); }
+        .accordion-body { padding: 18px 20px; font-size: 1.05rem; color: var(--text-secondary); }
+        .accordion-body .row { display: flex; margin-bottom: 10px; align-items: flex-start; }
+        .accordion-body .icon { width: 28px; flex-shrink: 0; font-size: 1.1rem; }
+        .breakfast-table, .info-table { width: 100%; border-collapse: collapse; font-size: 1.05rem; }
+        .breakfast-table th, .info-table th { background: var(--primary-color); color: white; padding: 12px 10px; text-align: left; font-weight: 600; font-size: 0.95rem; }
+        .breakfast-table th:first-child, .info-table th:first-child { border-radius: 10px 0 0 0; }
+        .breakfast-table th:last-child, .info-table th:last-child { border-radius: 0 10px 0 0; }
+        .breakfast-table td, .info-table td { padding: 12px 10px; border-bottom: 1px solid var(--border-color); font-size: 1rem; vertical-align: top; }
+        .breakfast-table tr:hover td, .info-table tr:hover td { background: var(--bg-color); }
+        .breakfast-table td:first-child { min-width: 100px; }
+        .time-highlight { background: #FFF3CD; padding: 4px 8px; border-radius: 6px; font-weight: 600; color: #856404; white-space: nowrap; display: inline-block; }
+        .section-divider { font-size: 1.3rem; font-weight: 700; color: var(--primary-dark); margin: 28px 0 18px; padding: 14px 18px; background: linear-gradient(135deg, #EDF5E4 0%, #F5F9F0 100%); border-radius: 12px; border-left: 5px solid var(--primary-color); }
+        .section-divider-sub { font-size: 1rem; font-weight: 400; color: var(--text-secondary); margin-left: 10px; }
+        .facility-card { background: white; border-radius: 14px; padding: 18px 20px; margin-bottom: 14px; border: 2px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+        .facility-card.hotel { border-left: 5px solid var(--primary-color); background: linear-gradient(135deg, #F5F9F0 0%, #FFFFFF 100%); }
+        .facility-info { flex: 1; min-width: 180px; }
+        .facility-name { font-weight: 700; color: var(--text-primary); font-size: 1.15rem; margin-bottom: 6px; }
+        .facility-location { font-size: 1rem; color: var(--text-secondary); }
+        .facility-time { background: #E8F5E9; color: #2E7D32; padding: 10px 14px; border-radius: 10px; font-size: 1rem; font-weight: 600; text-align: center; }
+        .facility-note { font-size: 0.95rem; color: #F57C00; margin-top: 6px; font-weight: 500; }
+        .room-info-card { background: linear-gradient(135deg, #F5F9F0 0%, #FFFFFF 100%); border: 2px solid var(--border-color); border-left: 5px solid var(--primary-color); border-radius: 14px; padding: 20px; margin-bottom: 18px; }
+        .room-info-title { font-weight: 700; color: var(--primary-dark); font-size: 1.2rem; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+        .room-info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+        .room-stat { background: white; padding: 16px; border-radius: 12px; text-align: center; border: 2px solid var(--border-color); }
+        .room-stat-label { font-size: 1rem; color: var(--text-secondary); margin-bottom: 6px; }
+        .room-stat-value { font-size: 1.3rem; font-weight: 700; color: var(--primary-dark); }
+        .bus-route-card { background: white; border-radius: 14px; padding: 20px; margin-bottom: 16px; border: 2px solid var(--border-color); border-left: 5px solid var(--primary-color); }
+        .bus-route-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px; flex-wrap: wrap; gap: 10px; }
+        .bus-destination { font-size: 1.2rem; font-weight: 700; color: var(--primary-dark); display: flex; align-items: center; gap: 10px; }
+        .bus-destination .icon { font-size: 1.4rem; }
+        .bus-frequency { background: #E8F5E9; color: #2E7D32; padding: 6px 14px; border-radius: 14px; font-size: 1rem; font-weight: 600; }
+        .bus-times { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        .bus-time-box { background: var(--bg-color); padding: 14px 16px; border-radius: 10px; }
+        .bus-time-label { font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 6px; }
+        .bus-time-value { font-size: 1.15rem; font-weight: 700; color: var(--text-primary); }
+        .bus-note { display: inline-block; background: #FFF3E0; color: #E65100; padding: 4px 12px; border-radius: 6px; font-size: 0.95rem; font-weight: 600; margin-left: 10px; }
+        .pickup-points { background: #E8F5E9; padding: 18px 20px; border-radius: 14px; margin-top: 18px; }
+        .pickup-title { font-weight: 700; color: #2E7D32; margin-bottom: 14px; font-size: 1.15rem; }
+        .pickup-list { list-style: none; }
+        .pickup-list li { padding: 10px 0; font-size: 1.1rem; display: flex; align-items: center; gap: 10px; }
+        .pickup-list li::before { content: "📍"; font-size: 1.2rem; }
+        .tips-box { margin-top: 18px; padding: 16px; background: #E8F5E9; border-radius: 12px; font-size: 1.05rem; }
+        .coming-soon-box { background: #F5F5F5; border: 2px dashed #CCC; border-radius: 14px; padding: 24px; text-align: center; margin-top: 18px; }
+        .coming-soon-box .icon { font-size: 2.5rem; margin-bottom: 12px; }
+        .coming-soon-box h3 { font-size: 1.2rem; color: var(--text-primary); margin-bottom: 8px; }
+        .coming-soon-box p { font-size: 1rem; color: var(--text-secondary); }
+        
+        .back-to-top { position: fixed; bottom: 24px; right: 24px; width: 48px; height: 48px; background: var(--primary-color); color: white; border: none; border-radius: 50%; font-size: 1.4rem; cursor: pointer; box-shadow: 0 3px 12px rgba(0,0,0,0.2); display: none; z-index: 200; align-items: center; justify-content: center; transition: opacity 0.3s, transform 0.3s; }
+        .back-to-top.show { display: flex; }
+        .back-to-top:hover { background: var(--primary-dark); transform: scale(1.1); }
+        .footer { text-align: center; padding: 28px 18px; color: var(--text-secondary); font-size: 1rem; border-top: 2px solid var(--border-color); margin-top: 35px; }
+        @media (max-width: 480px) { :root { --font-base: 17px; } .header { padding: 14px 12px; } .hotel-name-zh { font-size: 1.3rem; } .nav-tabs { top: 70px; } .nav-tab { padding: 12px 8px; font-size: 0.9rem; } .card { padding: 16px 14px; } .room-info-grid { grid-template-columns: 1fr; } .bus-times { grid-template-columns: 1fr; } .breakfast-table th, .breakfast-table td { padding: 10px 8px; font-size: 0.95rem; } .breakfast-table td:first-child { min-width: 80px; } }
+        @media (min-width: 768px) { .channel-grid { grid-template-columns: 1fr 1fr; } .main-content { padding: 24px; max-width: 900px; margin: 0 auto; } }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div>
+                <div class="hotel-name-zh">葡京人酒店</div>
+                <div class="hotel-name-en">LISBOETA HOTEL</div>
+                <div class="subtitle" data-zh="房务部内部资讯" data-en="Housekeeping Info"></div>
+            </div>
+            <div class="lang-switcher">
+                <button class="lang-btn active" onclick="setLanguage('zh')">中文</button>
+                <button class="lang-btn" onclick="setLanguage('en')">EN</button>
+            </div>
+        </div>
+    </header>
+
+    <nav class="nav-tabs">
+        <div class="nav-tabs-inner">
+            <button class="nav-tab active" onclick="showSection('breakfast', this)"><span class="icon">🥐</span><span data-zh="早餐" data-en="Breakfast"></span></button>
+            <button class="nav-tab" onclick="showSection('restaurant', this)"><span class="icon">🍽️</span><span data-zh="餐厅" data-en="Dining"></span></button>
+            <button class="nav-tab" onclick="showSection('tv', this)"><span class="icon">📺</span><span data-zh="电视" data-en="TV"></span></button>
+            <button class="nav-tab" onclick="showSection('laundry', this)"><span class="icon">👔</span><span data-zh="洗衣" data-en="Laundry"></span></button>
+            <button class="nav-tab" onclick="showSection('facility', this)"><span class="icon">🏨</span><span data-zh="设施" data-en="Facilities"></span></button>
+            <button class="nav-tab" onclick="showSection('mall', this)"><span class="icon">🏢</span><span data-zh="商场" data-en="Mall"></span></button>
+            <button class="nav-tab" onclick="showSection('bus', this)"><span class="icon">🚌</span><span data-zh="巴士" data-en="Bus"></span></button>
+            <button class="nav-tab" onclick="showSection('loccitane', this)"><span class="icon">🧴</span><span data-zh="欧舒丹" data-en="L'Occitane"></span></button><!-- Tab label stays short, page title uses full name -->
+            <button class="nav-tab" onclick="showSection('pricelist', this)"><span class="icon">💰</span><span data-zh="价目表" data-en="Prices"></span></button>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <!-- Breakfast -->
+        <section id="breakfast" class="section active">
+            <div class="card">
+                <h2 class="card-title">🥐 <span data-zh="早餐时间表" data-en="Breakfast Hours"></span></h2>
+                <div style="overflow-x: auto;">
+                    <table class="breakfast-table">
+                        <thead><tr><th data-zh="餐厅" data-en="Restaurant"></th><th data-zh="时间" data-en="Time"></th><th data-zh="类型" data-en="Type"></th></tr></thead>
+                        <tbody>
+                            <tr><td><strong data-zh="燊哥冰室" data-en="Stanley's"></strong><br><span style="color:#666" data-zh="1楼 LO2" data-en="1/F LO2"></span></td><td><span class="time-highlight">07:00-10:30</span></td><td data-zh="自助" data-en="Buffet"></td></tr>
+                            <tr><td><strong data-zh="安琪儿咖啡" data-en="Angel Café"></strong><br><span style="color:#666" data-zh="1楼 L04" data-en="1/F L04"></span></td><td><span class="time-highlight">07:30-10:30</span></td><td data-zh="半自助" data-en="Semi"></td></tr>
+                            <tr><td><strong data-zh="朋友仔餐厅" data-en="Brown &amp; Friends"></strong><br><span style="color:#666" data-zh="2楼" data-en="2/F"></span></td><td><span class="time-highlight">09:00-12:00</span></td><td data-zh="西式" data-en="Western"></td></tr>
+                            <tr><td><strong data-zh="招牌面" data-en="Signature Noodles"></strong><br><span style="color:#666" data-zh="1楼 L03" data-en="1/F L03"></span></td><td><span class="time-highlight">08:30-10:30</span></td><td data-zh="面食" data-en="Noodles"></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tips-box"><strong>💡</strong> <span data-zh="燊哥冰室为酒店主要早餐点" data-en="Stanley's Café is the main breakfast venue"></span></div>
+            </div>
+        </section>
+
+        <!-- Restaurants -->
+        <section id="restaurant" class="section">
+            <div class="card">
+                <h2 class="card-title">🍽️ <span data-zh="酒店餐厅" data-en="Restaurants"></span></h2>
+
+                <div class="accordion hotel-owned open">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <div class="title"><span class="num">1</span><span data-zh="燊哥冰室" data-en="Stanley's Café"></span><span class="badge" data-zh="24小时" data-en="24H"></span></div>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content"><div class="accordion-body">
+                        <div class="row"><span class="icon">📍</span><span data-zh="1楼 LO2" data-en="1/F LO2"></span></div>
+                        <div class="row"><span class="icon">🍳</span><span data-zh="冰室风味" data-en="Bing Sutt"></span></div>
+                        <div class="row"><span class="icon">⏰</span><span data-zh="00:31-07:00 仅外带" data-en="00:31-07:00 Take-away"></span></div>
+                        <div class="row"><span class="icon">🥐</span><span data-zh="早餐 07:00-10:30" data-en="Breakfast 07:00-10:30"></span></div>
+                    </div></div>
+                </div>
+
+                <div class="accordion hotel-owned">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <div class="title"><span class="num">2</span><span data-zh="葡挞及奶茶车" data-en="Tart &amp; Tea Cart"></span></div>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content"><div class="accordion-body">
+                        <div class="row"><span class="icon">📍</span><span data-zh="1楼大堂" data-en="1/F Lobby"></span></div>
+                        <div class="row"><span class="icon">🕐</span><span class="time-highlight">12:00 - 18:00</span></div>
+                        <div class="row"><span class="icon">📦</span><span data-zh="仅外带" data-en="Take-away Only"></span></div>
+                    </div></div>
+                </div>
+
+                <div class="accordion hotel-owned">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <div class="title"><span class="num">3</span><span data-zh="烧味档" data-en="Siu Mei"></span></div>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content"><div class="accordion-body">
+                        <div class="row"><span class="icon">📍</span><span data-zh="1楼 08铺" data-en="1/F Shop 08"></span></div>
+                        <div class="row"><span class="icon">🕐</span><span data-zh="日-四: 11:30-14:30" data-en="Sun-Thu: 11:30-14:30"></span></div>
+                        <div class="row"><span class="icon">🕐</span><span data-zh="五六: 11:30-14:30, 17:00-20:00" data-en="Fri-Sat: 11:30-14:30, 17:00-20:00"></span></div>
+                    </div></div>
+                </div>
+
+                <div class="accordion">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <div class="title"><span class="num">4</span><span data-zh="安琪儿咖啡" data-en="Angel Café"></span></div>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content"><div class="accordion-body">
+                        <div class="row"><span class="icon">📍</span><span data-zh="1楼 L04" data-en="1/F L04"></span></div>
+                        <div class="row"><span class="icon">🕐</span><span data-zh="一-四: 07:30-23:00" data-en="Mon-Thu: 07:30-23:00"></span></div>
+                        <div class="row"><span class="icon">🕐</span><span data-zh="五-日: 07:30-00:00" data-en="Fri-Sun: 07:30-00:00"></span></div>
+                    </div></div>
+                </div>
+
+                <div class="accordion">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <div class="title"><span class="num">5</span><span data-zh="朋友仔餐厅" data-en="Brown &amp; Friends"></span></div>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content"><div class="accordion-body">
+                        <div class="row"><span class="icon">📍</span><span data-zh="2楼 蜂狂天地内" data-en="2/F Beebeeland"></span></div>
+                        <div class="row"><span class="icon">🕐</span><span data-zh="一-四: 09:00-21:00" data-en="Mon-Thu: 09:00-21:00"></span></div>
+                        <div class="row"><span class="icon">🕐</span><span data-zh="五-日: 09:00-22:00" data-en="Fri-Sun: 09:00-22:00"></span></div>
+                    </div></div>
+                </div>
+
+                <div class="accordion">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <div class="title"><span class="num">6</span><span data-zh="招牌面" data-en="Signature Noodles"></span></div>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content"><div class="accordion-body">
+                        <div class="row"><span class="icon">📍</span><span data-zh="怀旧街 1楼 L03" data-en="1/F Old Street L03"></span></div>
+                        <div class="row"><span class="icon">🕐</span><span data-zh="日-四: 08:30-22:30" data-en="Sun-Thu: 08:30-22:30"></span></div>
+                        <div class="row"><span class="icon">🕐</span><span data-zh="五六: 08:30-23:30" data-en="Fri-Sat: 08:30-23:30"></span></div>
+                    </div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TV -->
+        <section id="tv" class="section">
+            <div class="card">
+                <h2 class="card-title">📺 <span data-zh="电视频道表" data-en="TV Channels"></span></h2>
+                <div class="tv-note"><strong>⚠️</strong> <span data-zh="本酒店没有翡翠台，只有无线新闻台（频道6）" data-en="No TVB Jade. Only TVB News (Ch.6)"></span></div>
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" id="channelSearch" data-placeholder-zh="搜索频道..." data-placeholder-en="Search..." oninput="filterChannels()">
+                </div>
+                <div class="channel-grid" id="channelGrid"></div>
+            </div>
+        </section>
+
+        <!-- Laundry -->
+        <section id="laundry" class="section">
+            <div class="card">
+                <h2 class="card-title">👔 <span data-zh="洗衣服务" data-en="Laundry"></span></h2>
+                <div class="service-box">
+                    <div class="service-title">⏰ <span data-zh="当天服务" data-en="Regular Service"></span></div>
+                    <ul class="service-details">
+                        <li data-zh="11:00 前收取 → 当天 18:00 送还" data-en="Before 11AM → Same day 6PM"></li>
+                        <li data-zh="11:00 后收取 → 次日 18:00 送还" data-en="After 11AM → Next day 6PM"></li>
+                    </ul>
+                </div>
+                <div class="service-box">
+                    <div class="service-title">⚡ <span data-zh="特快服务" data-en="Express"></span> <span class="express-badge">+100%</span></div>
+                    <ul class="service-details"><li data-zh="4 小时内送还" data-en="Within 4 hours"></li></ul>
+                    <div class="time-warning" data-zh="⚠️ 仅限 08:00 - 14:00 收取" data-en="⚠️ 08:00 - 14:00 ONLY"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Facilities -->
+        <section id="facility" class="section">
+            <div class="card">
+                <h2 class="card-title">🏨 <span data-zh="酒店设施" data-en="Facilities"></span></h2>
+                <div class="facility-card hotel">
+                    <div class="facility-info"><div class="facility-name" data-zh="🏊 游泳池" data-en="🏊 Pool"></div><div class="facility-location" data-zh="酒店内" data-en="In Hotel"></div></div>
+                    <div class="facility-time">09:00-18:00</div>
+                </div>
+
+                <div class="room-info-card">
+                    <div class="room-info-title">📐 <span data-zh="房间面积" data-en="Room Size"></span></div>
+                    <div class="room-info-grid">
+                        <div class="room-stat"><div class="room-stat-label" data-zh="标准客房" data-en="Standard"></div><div class="room-stat-value" data-zh="约 38 m²" data-en="~38 m²"></div></div>
+                        <div class="room-stat"><div class="room-stat-label" data-zh="套房" data-en="Suite"></div><div class="room-stat-value" data-zh="约 71 m²" data-en="~71 m²"></div></div>
+                    </div>
+                </div>
+
+                <div class="room-info-card">
+                    <div class="room-info-title">🛏️ <span data-zh="床铺尺寸" data-en="Bed Sizes"></span></div>
+                    <div style="overflow-x: auto;">
+                        <table class="info-table">
+                            <thead><tr><th data-zh="床型" data-en="Type"></th><th data-zh="尺寸 (宽×长×厚 cm)" data-en="Size (cm)"></th></tr></thead>
+                            <tbody>
+                                <tr><td data-zh="大床" data-en="King"></td><td>183×203×32</td></tr>
+                                <tr><td data-zh="细床" data-en="Single"></td><td>135×203×32</td></tr>
+                                <tr><td data-zh="沙发床(大)" data-en="Sofa Big"></td><td>145×183×13</td></tr>
+                                <tr><td data-zh="沙发床(小)" data-en="Sofa Small"></td><td>90×183×13</td></tr>
+                                <tr><td data-zh="沙发床（欧舒丹、朋友仔）" data-en="Sofa (L'Occitane/Line Friends)"></td><td>120×190×10</td></tr>
+                                <tr><td data-zh="加床" data-en="Extra"></td><td>95×180×15</td></tr>
+                                <tr><td data-zh="婴儿床" data-en="Cot"></td><td data-zh="66×110×102(高)" data-en="66×110×102(H)"></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mall -->
+        <section id="mall" class="section">
+            <div class="card">
+                <h2 class="card-title">🏢 <span data-zh="商场设施" data-en="Mall"></span><span class="section-divider-sub" data-zh="（部分）" data-en="(Partial)"></span></h2>
+
+                <div class="section-divider">🍔 <span data-zh="餐饮" data-en="Dining"></span></div>
+                <div class="facility-card"><div class="facility-info"><div class="facility-name" data-zh="🍟 麦当劳" data-en="🍟 McDonald's"></div></div><div class="facility-time">10:00-20:00</div></div>
+
+                <div class="section-divider">🛒 <span data-zh="购物" data-en="Shopping"></span></div>
+                <div class="facility-card"><div class="facility-info"><div class="facility-name" data-zh="🛒 品鲜超市" data-en="🛒 Pin Sin"></div></div><div class="facility-time">11:00-00:30</div></div>
+                <div class="facility-card"><div class="facility-info"><div class="facility-name" data-zh="🍬 乐家福" data-en="🍬 Noble Mart"></div><div class="facility-location" data-zh="H853 1楼 R72" data-en="H853 1/F R72"></div></div><div class="facility-time">11:00-21:00</div></div>
+                <div class="facility-card"><div class="facility-info"><div class="facility-name" data-zh="🎁 泡泡玛特" data-en="🎁 POP MART"></div></div><div class="facility-time">11:00-20:00</div></div>
+
+                <div class="section-divider">🎮 <span data-zh="娱乐设施" data-en="Entertainment"></span></div>
+                <div class="facility-card"><div class="facility-info"><div class="facility-name" data-zh="🎢 蜂狂天地" data-en="🎢 BEEBEELAND"></div><div class="facility-location" data-zh="H853 2楼 R92" data-en="H853 2/F R92"></div></div><div><div class="facility-time" style="margin-bottom:6px" data-zh="一-四 10-21" data-en="Mon-Thu 10-21"></div><div class="facility-time" data-zh="五-日 10-22" data-en="Fri-Sun 10-22"></div></div></div>
+                <div class="facility-card"><div class="facility-info"><div class="facility-name" data-zh="🎬 英皇戏院" data-en="🎬 Emperor Cinema"></div><div class="facility-location" data-zh="H853 2楼 (IMAX)" data-en="H853 2/F (IMAX)"></div></div><div class="facility-time">11:00-00:30</div></div>
+                <div class="facility-card"><div class="facility-info"><div class="facility-name" data-zh="🪂 澳门飞索" data-en="🪂 Zipline"></div><div class="facility-location">R89, R100</div><div class="facility-note" data-zh="⚠️ 逢二、三休息" data-en="⚠️ Closed Tue-Wed"></div></div><div><div class="facility-time" style="margin-bottom:6px">14:00-16:30</div><div class="facility-time">18:00-21:30</div></div></div>
+            </div>
+        </section>
+
+        <!-- Bus -->
+        <section id="bus" class="section">
+            <div class="card">
+                <h2 class="card-title">🚌 <span data-zh="穿梭巴士" data-en="Shuttle Bus"></span></h2>
+
+                <div class="bus-route-card">
+                    <div class="bus-route-header"><div class="bus-destination"><span class="icon">🚪</span><span data-zh="关闸" data-en="Border Gate"></span></div><div class="bus-frequency" data-zh="每40-50分钟" data-en="40-50 min"></div></div>
+                    <div class="bus-times"><div class="bus-time-box"><div class="bus-time-label" data-zh="往葡京人" data-en="To Hotel"></div><div class="bus-time-value">11:00-19:35</div></div><div class="bus-time-box"><div class="bus-time-label" data-zh="由酒店出发" data-en="From Hotel"></div><div class="bus-time-value">11:00-19:30</div></div></div>
+                </div>
+
+                <div class="bus-route-card">
+                    <div class="bus-route-header"><div class="bus-destination"><span class="icon">✈️</span><span data-zh="码头/机场" data-en="Ferry/Airport"></span></div><div class="bus-frequency" data-zh="每45分钟" data-en="45 min"></div></div>
+                    <div class="bus-times"><div class="bus-time-box"><div class="bus-time-label" data-zh="往葡京人" data-en="To Hotel"></div><div class="bus-time-value">11:00-19:50</div></div><div class="bus-time-box"><div class="bus-time-label" data-zh="由酒店出发" data-en="From Hotel"></div><div class="bus-time-value">11:25-19:25</div></div></div>
+                </div>
+
+                <div class="bus-route-card">
+                    <div class="bus-route-header"><div class="bus-destination"><span class="icon">🛂</span><span data-zh="横琴口岸" data-en="Hengqin"></span></div><div class="bus-frequency" data-zh="每30分钟" data-en="30 min"></div></div>
+                    <div class="bus-times"><div class="bus-time-box"><div class="bus-time-label" data-zh="往葡京人" data-en="To Hotel"></div><div class="bus-time-value">11:00-19:35</div></div><div class="bus-time-box"><div class="bus-time-label" data-zh="由酒店出发" data-en="From Hotel"></div><div class="bus-time-value">11:15-19:50</div></div></div>
+                </div>
+
+                <div class="bus-route-card">
+                    <div class="bus-route-header"><div class="bus-destination"><span class="icon">🏰</span><span data-zh="永利皇宫" data-en="Wynn Palace"></span><span class="bus-note" data-zh="週四至日" data-en="Thu-Sun"></span></div><div class="bus-frequency" data-zh="每20分钟" data-en="20 min"></div></div>
+                    <div class="bus-times"><div class="bus-time-box"><div class="bus-time-label" data-zh="往葡京人" data-en="To Hotel"></div><div class="bus-time-value">12:00-21:00</div></div><div class="bus-time-box"><div class="bus-time-label" data-zh="由酒店出发" data-en="From Hotel"></div><div class="bus-time-value">12:00-21:00</div></div></div>
+                </div>
+
+                <div class="pickup-points">
+                    <div class="pickup-title" data-zh="📍 上落车点" data-en="📍 Pickup Points"></div>
+                    <ul class="pickup-list">
+                        <li data-zh="澳门国际机场及氹仔客运码头" data-en="Airport &amp; Taipa Ferry"></li>
+                        <li data-zh="横琴口岸" data-en="Hengqin Border"></li>
+                        <li data-zh="关闸" data-en="Border Gate"></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- L'Occitane -->
+        <section id="loccitane" class="section">
+            <div class="card">
+                <h2 class="card-title">🧴 <span data-zh="欧舒丹产品介绍" data-en="L'Occitane Product Guide"></span></h2>
+                <p style="font-size:1rem; color:var(--text-secondary); margin-bottom:18px;" data-zh="欧舒丹客房产品系列目录" data-en="L'OCCITANE Guest Room Product Series Catalog"></p>
+
+                <div class="accordion open">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <div class="title"><span class="num">1</span><span data-zh="泡澡块 18GR" data-en="Bath Cube 18GR"></span></div>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content"><div class="accordion-body">
+                        <div class="product-img-wrapper"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCADIAQoDASIAAhEBAxEB/8QAHAABAAEFAQEAAAAAAAAAAAAAAAQCAwUGBwEI/8QAQBAAAgIBAgQEAgcECQMFAAAAAQIAAxEEBRITITEGQVFhInEHFDJCgZGhFVLB0SMzNERygpKx8RYXgyRTk+Hw/8QAGQEBAAMBAQAAAAAAAAAAAAAAAAECAwQF/8QAIxEBAQACAgEEAwEBAAAAAAAAAAECEQMSMRMhQVEEImFCgf/aAAwDAQACEQMRAD8A+qYiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICa59IGtt0XhnUNRY9d1jLWrIcEZPr8hNjnO/pT17pfpNFj+jKG0+5ziVyuomLfhvx29FK0b0j2KOgvQZP8AmHn85vW17tod1rZ9v1VV4XowU9VPuO4nBrrxTVZYp6KCSrTGeEN11G2+I/2rhkwRxKG6Mp7jHn0lJn9sOXmnHlJ9vpqJRRat1NdtZyjqGU+xGZXNWxERAREQEREBERAREQEREBERASPdrdLTnm6mlMfvOBMH433F9HtyUUsVsvJBKnqFHecyuVOIktYx9JW5aTI6vqfE+0UZzq1sI8qwWmMu8baUNjT6W6z04iF/nOcfZ7VsB6kzNeFbKF37RnUlQgb73bOOn6yne1bTqmiubU6Sq56npZxko/dZeiJqoREQEREBERAREQE5L9IV41XiK5S2BSq1r/uf1M61OBeLNQ9viXX2K3Q3Nj07ymfgYnfuJttvAZWGJrKWNXZWVVsMxUqT07TKeI9SV0SpYCrWOFDL85jNHYbGWtsMEcuG9ekyeV+V++eo7L4O+kJNPt+m0W56ZilKCsX1NnIA6ZUzo227tody063aLVVWo3ocEfMHqJ867IOKmxX6Lxsv6zYtvPKqCocDJPT5y8zrs4M8rJMndYnHqdZfX9i6wH2YiTqt51y9F1t4x6vLd3Rt1OJzFt+14GTr7QB3OZaXftZY2BuNpb0Dx3huOpxOYDdtcR11t/8ArM8/amt7/Xrz/nMd4bdQicubeNco/tt4/wA8oO+69f79f/qjvDbqkTlq+INx6Y11v4mV/wDUO5+Wus/T+Ud4l0+Jy4+JN0H99f8A0j+Uf9T7qP74f9K/yjvB1EkAEk4A85o/iHxyuntso2lEuZDwm5/s59h5/Oa/rfEG5avTPRdq35bjDcKgEj5zBMtVSgYJxIuf0i7+Ge3zfv229DmrlNUnCfiyGPmR7TD3WdDm4AewkFreJwAAAOwEvk256JUo95nbteKCyE9HsY+/aTtl0dm4bpptLXkGx+p9AOpP5SEzOehsQ+yzI+G9zO2bvRfgMM8LfI9DJizsygKoA7AYnsCJuzIiICIiAiIgIiIGK8Vbl+ydh1erH21ThT/Eeg/3nB7nNjcbqXLdTOo/SjuFT7eu2IeK1mWx8fdA7CcxFOD0cqZlnd0apv8AqOPWU0128GMuVcenaXNCmHrB4M8viPD6kyjeq2u3WwEJYwARQO5zPK669DY4BOVrGQTk5lHleeW2ptN11XOqRcKX4i+e2QMzadmKvo6SrdMZ7zWNu0j6tebqGYVMeiDpxTYqVWpFWsBVAwAJLp4McvN8MsXCjpMfffjc9OOLA4WJGe/aVB8DuZS61v1ZEY+4zDfOW+HmstCGu3iJqe1TZ6Yx0lzX2Emjln+l5i8OPTz/AAxPQRw8JAx2xiQlteoM1enXIYjouCV6wyzmv+pOiu5+may6xhZxkE8WOHB7SvRW/WNM1l1jB+Ig4Yjgwe0j2YN1ZWlSWXiYkdsSzz+NQ76dOMk5yD1xjEKz2s2vqzNXrHayz4HcL8R6dJa1FliaKtqXsa2xA3cnsMmVO3ClqnTqFZwGHX4veeC1K3OKMcKlVIJxw5AhEl8beXam0vTfp8shr42rz3Ht7yg6qxkpamyx0svKjDd1x2lzTioagIlarhehBJHykj6pSwANfQMWABxg+sJmOWXirmndhSvEWLefEeol3jOOstoi1rhBgd+894gIdM9opt1C1MgdgFbIyTLVlosQOjcSMMgjzljcw1lSYVGQNl+M4GJBr1/1h14VVKm6Vj7xHrjyHpIVmesutTkbDDpke0m9G+zQzfMyFV0cZJAx3ElhkY/1lrfIQ2irBHXlKnyM2DwPtle472jXleXQObwH7xHb9eswCqvXAsH+KZ/wZpdTfv1B0pKCo8djeQX0/HtJnlZ1mIibqEREBERAREQEE4BJ7RLepYJp7WPYKT+kDiO96p9bu+q1DHPHYxHsM9JE+Mg44W9petPG54MES0yLj4q2X3EwTWm7np+dv9gUPU4KkMvylFGiazX8NpLKOrZ8/aS93tGk3iu/mkqR9nHfH/M92q76zZZZjHXr8zIebjjjeW43ztmKgB0AxiSV79pHQeeZW9y1IWbsJLuXbbBVWXbsPKWW1vLDlqmHD3GRPLtRRbUyHLdCSMHylk/VmTPEzFsZHF+sMs87/mpS69SrlVb4QCeo8/8Amepr63L4DHhBY9pHFelFZ4bCFfp3gJpULYsI4lwcHvCnbP7SF11bKGAbHDxYx1xnEqGsrNbOOLAOD884kNatMpGHYg9DgjoPeSjRp1pdw5KnDMR1ziCZZKxra+LqH6E+XpPTr6QRnj6jI+GWVr0xHWzrlu+M9Yp0+ns7OxOCuOnaDtkvfXKeLHx5zjqJ6dZUCPtkHseHvIwTT2uRxsoYBcHHXEpbkBMi1itZ4QBg4zBM8kldZW7KqcZ4uxx0l7i/OQEOnrdeC0Agk4J9e8q+tVswxYvX3hphn9oXiexl27oSMsAcecwe17gtd9amoYJyzN3Jx6/wma8R/FoFAGW4x0Azma5VSv1Z7lbLVnHTyB7GQ4Oe5Tn3i3fTtzNOlqsF4hkE+kqW4rnj1a/gJi9BqWbSUpXUbRjzBUfmf4SUHsB+HT1L7kw9HjzmUiV9bX7tps+c6D9Fm56awavRkKuqJDg/vqP5TmDu/Fl+X/lm8fRFthu3bU7k7jhoTlovmS3c/LA/WWx8tvh1mIibIIiICIiAiIgJa1a8WkuU9ijD9Jdmq/SHuuo23aqk03Q6hjWzeYGPKRbocxtZUJWwFSOnw9Z4rVkf0d+D6NKFLM4IZVPq0ustjL8VVdnymC9YPedtfWlDxovAergZ6GY5qE0h4KCVKHOSftHHnMtqn5C2PXp2Rh3yegHrMBuerNerC28Id+2Oxx6Q4+THDHK5/LP6S1baldOzS49auMOMiYfar1S7gDA12dV9j6TNcUlfDKZza1XpqlJwuM9O8qGiqyfh7+5kfV6pqLFVVUgqWyc9MSgbhdj+rXpj184VuWE9qnfVa8dj094NFCDLggfMyKmusNhQ1rkNw54vPyla7iUTiesAZIzk+UK3LjXgmjx9rH4mXuPSivh5mVPcdesj2bg6OyvWPhAJ4Se0qXcH4WZkXgChgQ3fPaETLH4VD6mOgcD8TCvpFccFhDHp0J6y1br3Tjyi5TGQG79JbXceMWNyxhU4u8G8Us1V8QPCcjoOstPp6+XwY6Zz85Ds3QICeX0HTv8AL+crs14S1VdDgpx5J/SFplgunR1EdQfnnrKDpKhw/a6dsmWm3HhHFyfhOOvF6jMmKS6BsYyM4hOPTLwhbyBZpEHHw/0gzjuRnykFNKj/AFkVfY4z2GMjGR+smbrqjpNNx1nhbiAzjMwek3e67XJ9avZalP2UT7R98Q5+TPCcmr5ZnTPYdNXVZqURAOmE+ID2J6GS101CqFxqLfdj3kqrT1jTKthXg6/aGRLwapAB9ZAA6ABe0h1cWFx8scdPWOq0unzmR8O7lrNp3ai3RcZZnClB9/JxiVLfXxdLWf5rNn8DHS2eIdM1xXIDcAPbix0kzy6J4dYByBkYMRE3VIiICIiAiIgJov0maipq9LpmILKTYR+g/jN6nG/pHa/TeLNRzOJqra0es+gxgj8xK5+CezDp8TE8kusrZaQpJW2o+0jU31n7Vr1GShcTWeXqUb2YTFfbHWMoDnmmwejTU9wIa9kdVcA4GT1/Efx7zbL0e5SGCAg90kFqSj4MMeTj7xrmktrrZlD+eQD0Kn1HrNrVjwD1x3mJ3BWsbhfkGvH2WwDn5mZWkfCufSS5+HC42zbHs9r4NtQY4IGRL721gKOQOIqvEOsn+fWMecL+n/UHmgdU06Ke4PWVV214ZuQOgxgjuTJue09U5HWEXjQKHQly1YyOvXuJTXqCOLipU5HCV7dJPbJ7Qc4hHp/1jdQykKa0BBT4wPnC208FhOn4QBgjJ6zJYGO0oY/lB6bGPZVcxzVwnqSSc5AH/EpFtXCnNqJZQBnOMTKHqMmegDr2g9KsUL9OMq1DAZ6Dj/CZCi/jBUIU4cDqcysqPISgLwDAHTvC+OFxqBvz8vRKxRX+MdG7TDJuDV2q6vQGPThCYCj8B3me3NeLTqjDIZsfKa1YtldzOeE8vAGehIEOH8ntjybjfdHabtFU6IGyOitKybwelNC/MiQdvtNu3VtajdOhVe4lzFJP9mvb5mQ9PC7kq+73D+sNWPRZN2XS6rcdzo02hBFzMDxD7g82PymJYIpHDpnr9yZnvB/iBdj3MWOuaXHDYAOuPaTPLT4duQFUUFixAwSfOeyzotVTrtJVqdLYLKLV4kYeYl6bqkREBERAREQKNRYKaLLWBIRSxA9hmcI3jeG3nVPq7WDNac9DkKPJRO73sqU2PZ9hVJb5YnzvqdAaNXaNMuaGYsqj7oJ7SmaNW1KoW1k+EVMvv3nt6Mqnj0g+amUUoigczTXA+qy5YaxWeCy9D6HMyW0iizlrhVKqfIzH7tqhVV3ILdMr3EyFgHLOTn385rdujItJOods+ZUE/nCnJ21qI1YaxsrxKM98dT8yZs9PQDPpMGK9NVXi0O5+fWXf20idBUQPnmGXFxXG3bOZ6jrmekiYL9s1HucR+1aicgyW2mQ3BmKLy+LPF92RNFz0YcaEvg4Yk4xPBuFTec9G4V+TQzvFu9tvLlsNzZVipbPn09ZW1TjT8VCuH4z3z2nn12vp8Uurrk/eH5wp6H9W3rZEt5YszlexPp/OUA32OxKvnJI6EdMf8SQNYvXDCBq17ZzB6P8AUahiNQvELOHOQcH0/nMoMdsSI2sUdAZSdWowQYXww6pjH0lIOR6SC2sX96F1qebQvpL1S1PSUtJAbpnPYzBbrpDTXkISONjk9iO+Zf3XcErorIKk8Y6E95eqJ1GnwqOaj0ZHI4kPqPUSHJzSZ24o2z6nUmoOtV/wHhV+LCD395nq72Kjm64K3mAMzW9C9qCxK2IKnIBJKn59ekn06rV1uObyAnvWCPzEKfjc0x9qyllq5GNYXP7pEk7Nto3feNHpXsCUW2hbGzghfPHz7fjIha2+rirXSuvqhzLVV11FyuqEMD0xD0fM9n0npNPVpNNVp9NWtdNShERewA8pdmP8PnVtsujO4/2s1g2fP395kJ0IIiICIiAiIgQd+Fh2XXCj+s5LcP5TiYu4sFumfOdr33cK9s223UWDJA4VX95j2E4yyHJ5YXqc4PaZ5rYqUcfc1QHsRKNYX5eWuRwfIS6Et+9p6m+Usa3IrGdPwe4lEsNulzU6d2QcTAZxNbbcbiOIrWQfw/XJmb3K34zgzXNdZpw7dSHPcVk5/HH8YZZ7+Ki6vUai+0kYVMfZJ6fp3l2v4NIr3dMHHQSvbdo3XcX4tn2nWatv3lrL4/HsJvmyfRV4p1VLNrho9HzACFus4yp9wuev4xq1lO0vs5pbe7HFaYHqesjsMkF2Ln0Had20f0I1Pht03q2w9ytFIUfgSTNk236I/Cmj4eZpLtUR/wC9acH8BiWmFW65Xy+atPbYG4SSoI6DPXPymX23Z9+3NyNs23Xaji7HlHhH4kYn1PtvhrZNsAGg2rRUEea0jP595lwABgDAlui0xvzXzz4b+inxNr7FbdrNPt2n7niAez8AD/uZvum+iHZUrA1Gr11r+bBlQflidJiTMYtJpzs/RJsHlfuA/wDKP5Tz/tHsflqtwH/kX+U6LEnrEuaP9EO0sfh3DcB+Kn+E1Xxl9Fu4bZpG1Wx3WbjWgy9BAW0D1Xyb5d53WJHWD40OsVWZLeZXYpwysuCp95au3KipCzM3T16T6r8TeBvD3iRms3Pbq21BGOfX8Fn5jv8AjOb7/wDQFoNUjfsredTpzjomorFg/MYMr0quXbXs4RqN0fVHFZQAfdPXP5zObHcxsqIchlIBBP3fT/8Aekq8Y/Rj4i8HqdXrqadRoA3TU6Ziyr/iB6r/ALSBtjjmJYpKkDGD5j/6lLNMMN3L9mxanSA6xlXjKsCcKcE9paQU0XqaadXYwOQFdlz8xk5mRuUvp67kfgtC9GHYfP2lwBbaFue4WUMfjCjLVt5kHvIcuXDrkuk/QsjHjXROqt3syQc+4ImW0LVV6um2xMitw+D54OZDoqKEFNe1lePsMAc++e8lU6e3UWpXQC9jkKqjzOYenxyye7vmlvTU6eu6o5SxQyn2MuTH+H9C227NpNHY/G9SYY+/czIToCIiAiIgIiIGA8abZbuezldMCbqnFiqPvDsR+U5ddpXpJGoq1CH0NZE7hBAIwQCPeVuO0y6cC1N+k0qhrLLUz2HmZjtbrHur/wDSuTnsrZJP4CfQ9mj01uOZp6Xx+8gM9q0mmpbip09NbeqoAZXorlu+K+f9j+jbxD4gcX6522/Rt14rgQ5Hsg6/nidP8N/Rj4c2UI76X69qV683UgMM+y9hN3iWmMiJjIprrStAlaqiDoFUYAlURLLEREBERAREQEREBERAREQLWr09Or01un1NaW0WqUdHGQynuDPnH6QPo2u8KaqzW7bxXbLY3Tzag+St7eh/OfScovqrvpeq5FsrccLKwyCPQiRZtGnzF4Wxc3LZQ2FI4T1BmZ0G3to1tRNPTwM/GMnqJu930YHR7xbqto1FY0tmSKLcg1k+QI7iev4D3E9jp/8A5T/KZdanrjb2ajwH71FQHtJOivbSauvUVYV62DD8JsY8A7mfv6Ye5sJ/hJ+1+BdQmrrbX20GhWBZUJJYenaJjV9xvmjvGp0lN4GBYgfHpkZl6eKoVQqgBQMADyns2UIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgUcwRzBEQHMEcwREBzBHMERAcwRzBEQHMEcwREBzBHMERAcwRzBEQHMEcwREBzBHMERAcwRzBEQHMEcwREBzBHMERAcwRzBEQHMEcwREBzBHMERAcwRzBEQHMEcwRED/9k=" alt="泡澡块 18GR"></div>
+                        <div class="row"><span class="icon">🛁</span><span data-zh="用途：沐浴时使用" data-en="Use: For use during bath"></span></div>
+                        <div class="row"><span class="icon">✨</span><span data-zh="温和清洁、软化肌肤、淡淡香气" data-en="Gently cleanses, softens skin, delicate scent"></span></div>
+                        <div class="row"><span class="icon">🌿</span><span data-zh="含甜杏仁油，提供水疗般的放松体验" data-en="Contains sweet almond oil for spa-like relaxation"></span></div>
+                    </div></div>
+                </div>
+
+                <div class="accordion">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <div class="title"><span class="num">2</span><span data-zh="薰衣草香皂 25GR" data-en="Lavender Soap 25GR"></span></div>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content"><div class="accordion-body">
+                        <div class="product-img-wrapper"><img src="https://pfst.cf2.poecdn.net/base/image/2c9ec664d8eb326c7c136193306b41ff94c900892789e27eca414ee11cf228ab?w=423&h=370" alt="薰衣草香皂 25GR"></div>
+                        <div class="row"><span class="icon">🧼</span><span data-zh="用途：清洁肌肤" data-en="Use: For cleansing skin"></span></div>
+                        <div class="row"><span class="icon">✨</span><span data-zh="舒缓放松、柔软肌肤、不干燥" data-en="Soothes and relaxes, softens skin, non-drying"></span></div>
+                        <div class="row"><span class="icon">🌿</span><span data-zh="薰衣草香气，含乳木果提取物" data-en="Lavender scent with shea extract"></span></div>
+                    </div></div>
+                </div>
+
+                <div class="accordion">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <div class="title"><span class="num">3</span><span data-zh="枕头喷雾 15ML" data-en="Pillow Mist 15ML"></span></div>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content"><div class="accordion-body">
+                        <div class="product-img-wrapper"><img src="https://pfst.cf2.poecdn.net/base/image/0659f8f9727454e0e1683ec1c7079945c9014b89712d3a1267cf9381aab549ad?w=281&h=471" alt="枕头喷雾 15ML"></div>
+                        <div class="row"><span class="icon">💤</span><span data-zh="用途：喷洒于卧室和枕头" data-en="Use: Spray in bedroom and on pillow"></span></div>
+                        <div class="row"><span class="icon">✨</span><span data-zh="促进放松，营造宁静氛围" data-en="Promotes relaxation, creates a calming atmosphere"></span></div>
+                        <div class="row"><span class="icon">🌿</span><span data-zh="100%天然香味，薰衣草精油" data-en="100% natural scent with lavender essential oil"></span></div>
+                    </div></div>
+                </div>
+
+                <div class="accordion">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <div class="title"><span class="num">4</span><span data-zh="精华水 30ML" data-en="Essential Water 30ML"></span></div>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content"><div class="accordion-body">
+                        <div class="product-img-wrapper"><img src="https://pfst.cf2.poecdn.net/base/image/49986f3e57e552fbdcf5e115f3c3b4af06dfa4b493b913897de1179cb044fc61?w=356&h=466" alt="精华水 30ML"></div>
+                        <div class="row"><span class="icon">💧</span><span data-zh="用途：调理肌肤" data-en="Use: For toning skin"></span></div>
+                        <div class="row"><span class="icon">✨</span><span data-zh="减少毛孔、抚平细纹、调理和滋润" data-en="Minimizes pores, smooths fine lines, tones and hydrates"></span></div>
+                        <div class="row"><span class="icon">🌿</span><span data-zh="含蜡菊，提升肌肤质感" data-en="Contains immortelle, enhances skin texture"></span></div>
+                    </div></div>
+                </div>
+
+                <div class="accordion">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <div class="title"><span class="num">5</span><span data-zh="护手霜 18G" data-en="Hand Cream 18G"></span></div>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content"><div class="accordion-body">
+                        <div class="product-img-wrapper"><img src="https://pfst.cf2.poecdn.net/base/image/dba3d31fa51cc219c8ddb431af3be2a1a9532d9f3e129a41c0fb96f096a6fb8c?w=262&h=469" alt="护手霜 18G"></div>
+                        <div class="row"><span class="icon">🤲</span><span data-zh="用途：滋润双手" data-en="Use: For moisturizing hands"></span></div>
+                        <div class="row"><span class="icon">✨</span><span data-zh="软化手部、滋润肌肤" data-en="Softens hands, moisturizes skin"></span></div>
+                        <div class="row"><span class="icon">🌿</span><span data-zh="含杏仁奶和杏仁油，淡香" data-en="Contains almond milk and oil, with a subtle scent"></span></div>
+                    </div></div>
+                </div>
+
+                <div class="accordion">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <div class="title"><span class="num">6</span><span data-zh="沐浴油 35ML" data-en="Bath Oil 35ML"></span></div>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content"><div class="accordion-body">
+                        <div class="product-img-wrapper"><img src="https://pfst.cf2.poecdn.net/base/image/d84a50f77c17a1038f51efccdae7bf697dcdbbaf6f60b27fc59d9281a1abd04e?w=373&h=468" alt="沐浴油 35ML"></div>
+                        <div class="row"><span class="icon">🛁</span><span data-zh="用途：普通洗澡和泡澡" data-en="Use: For regular bathing and soaking"></span></div>
+                        <div class="row"><span class="icon">✨</span><span data-zh="软化和洁净肌肤" data-en="Softens and cleanses skin"></span></div>
+                        <div class="row"><span class="icon">🌿</span><span data-zh="含甜杏仁油，多重功效，可作为剃须基础" data-en="Infused with sweet almond oil, versatile, perfect as a shaving base"></span></div>
+                    </div></div>
+                </div>
+
+                <div class="accordion">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <div class="title"><span class="num">7</span><span data-zh="浓缩身体霜 20ML" data-en="Concentrate Body Cream 20ML"></span></div>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content"><div class="accordion-body">
+                        <div class="product-img-wrapper"><img src="https://pfst.cf2.poecdn.net/base/image/19cb98d44db89a2fb2850d52ab41736d3b7ab4d46954499655c5c0a29fb23671?w=342&h=475" alt="浓缩身体霜 20ML"></div>
+                        <div class="row"><span class="icon">🧴</span><span data-zh="用途：滋润肌肤" data-en="Use: For hydrating skin"></span></div>
+                        <div class="row"><span class="icon">✨</span><span data-zh="持久保湿、紧致和柔软肌肤" data-en="Long-lasting hydration, firms and softens skin"></span></div>
+                        <div class="row"><span class="icon">🌿</span><span data-zh="保湿杏仁奶，48小时滋润" data-en="Moisturizing almond milk for 48-hour hydration"></span></div>
+                    </div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Price List -->
+        <section id="pricelist" class="section">
+            <div class="card">
+                <h2 class="card-title">💰 <span data-zh="价目表" data-en="Price List"></span></h2>
+                <p style="font-size:1rem; color:var(--text-secondary); margin-bottom:6px;" data-zh="💵 价格单位：澳门元 (MOP)" data-en="💵 Currency: MOP (Macau Pataca)"></p>
+                <div class="time-warning" style="animation:none; margin-bottom:20px; font-size:1rem;" data-zh="⚠️ 不设补水（港幣/澳門幣/人民幣 1:1:1）" data-en="⚠️ No change given (HKD/MOP/RMB 1:1:1)"></div>
+
+                <div style="overflow-x: auto;">
+                    <table class="info-table">
+                        <thead><tr><th data-zh="物品" data-en="Item"></th><th data-zh="价格 (MOP)" data-en="Price (MOP)"></th><th data-zh="备注" data-en="Note"></th></tr></thead>
+                        <tbody>
+                            <tr><td data-zh="🔌 转换插" data-en="🔌 Power Adapter"></td><td><strong>$20</strong></td><td></td></tr>
+                            <tr><td data-zh="💅 指甲钳" data-en="💅 Nail Clipper"></td><td><strong>$10</strong></td><td></td></tr>
+                            <tr><td data-zh="🔥 打火机" data-en="🔥 Lighter"></td><td><strong>$10</strong></td><td></td></tr>
+                            <tr><td data-zh="🛁 浴缸套" data-en="🛁 Bathtub Cover"></td><td><strong>$10</strong></td><td></td></tr>
+                            <tr><td data-zh="🚽 马桶套" data-en="🚽 Toilet Seat Cover"></td><td><strong>$10</strong></td><td></td></tr>
+                            <tr><td data-zh="🩹 避孕套（3个）" data-en="🩹 Condoms (3 pcs)"></td><td><strong>$112</strong></td><td data-zh="不单卖" data-en="Not sold individually"></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer"><p data-zh="葡京人酒店 房务部内部使用" data-en="Lisboeta Hotel - Housekeeping"></p></footer>
+
+    <script>
+        const channels=[{num:1,name:"澳门葡京人信息 1",nameEn:"Lisboeta Info 1"},{num:2,name:"澳门葡京人信息 2",nameEn:"Lisboeta Info 2"},{num:3,name:"厦门卫视",nameEn:"Xiamen TV"},{num:4,name:"深圳卫视",nameEn:"Shenzhen TV"},{num:5,name:"Eurosport",nameEn:"Eurosport"},{num:6,name:"无线新闻台",nameEn:"TVB News"},{num:7,name:"有线第一高清频道",nameEn:"Cable TV HD"},{num:8,name:"紫金国际台",nameEn:"Zijin"},{num:9,name:"澳视体育",nameEn:"TDM Sports"},{num:10,name:"澳视综艺",nameEn:"TDM Ent"},{num:11,name:"澳视澳门",nameEn:"TDM Macau"},{num:12,name:"澳视葡文",nameEn:"TDM PT"},{num:13,name:"东风卫视",nameEn:"Dongfeng"},{num:14,name:"星空卫视",nameEn:"Xing Kong"},{num:15,name:"澳门莲花卫视",nameEn:"Lotus TV"},{num:16,name:"中天亚洲台",nameEn:"CTi Asia"},{num:17,name:"东森亚洲台",nameEn:"ETTV Asia"},{num:18,name:"东森新闻台",nameEn:"ETTV News"},{num:19,name:"凤凰卫视中文台",nameEn:"Phoenix CN"},{num:20,name:"凤凰卫视信息台",nameEn:"Phoenix Info"},{num:21,name:"凤凰卫视香港台",nameEn:"Phoenix HK"},{num:22,name:"东森幼幼台",nameEn:"YOYO TV"},{num:23,name:"BBC CBeebies HD",nameEn:"CBeebies"},{num:24,name:"Animax",nameEn:"Animax"},{num:25,name:"北京卫视",nameEn:"Beijing TV"},{num:26,name:"珠江台",nameEn:"Zhujiang"},{num:27,name:"大湾区卫视",nameEn:"GBA TV"},{num:28,name:"广东卫视",nameEn:"Guangdong"},{num:29,name:"湖南卫视",nameEn:"Hunan TV"},{num:30,name:"浙江卫视",nameEn:"Zhejiang"},{num:31,name:"江苏卫视",nameEn:"Jiangsu"},{num:32,name:"安徽卫视",nameEn:"Anhui"},{num:33,name:"上海东方卫视",nameEn:"Dragon TV"},{num:34,name:"三沙卫视",nameEn:"Sansha"},{num:35,name:"CCTV中文国际",nameEn:"CCTV-4"},{num:36,name:"中国环球电视网",nameEn:"CGTN"},{num:37,name:"中央纪录频道",nameEn:"CCTV-9"},{num:38,name:"亚洲新闻台",nameEn:"CNA"},{num:39,name:"高清生活时光",nameEn:"HD Life"},{num:40,name:"AXN",nameEn:"AXN"},{num:41,name:"TLC 旅游生活",nameEn:"TLC"},{num:42,name:"Fashion One",nameEn:"Fashion"},{num:43,name:"RT TV",nameEn:"RT TV"},{num:44,name:"探索频道",nameEn:"Discovery"},{num:45,name:"动物星球",nameEn:"Animal Planet"},{num:46,name:"NHK World",nameEn:"NHK World"},{num:47,name:"NHK",nameEn:"NHK"},{num:48,name:"TV5Monde",nameEn:"TV5Monde"},{num:49,name:"ABC 澳大利亚",nameEn:"ABC AU"},{num:50,name:"FOX 新闻台",nameEn:"FOX News"},{num:51,name:"法国新闻台",nameEn:"France 24"},{num:52,name:"DW-TV 亚洲",nameEn:"DW-TV"},{num:53,name:"彭博信息",nameEn:"Bloomberg"},{num:54,name:"半岛电视台",nameEn:"Al Jazeera"},{num:55,name:"土耳其国际",nameEn:"TRT World"},{num:56,name:"RTPi 葡国",nameEn:"RTPi"},{num:57,name:"EWTN",nameEn:"EWTN"}];
+        let currentLang='zh';
+        document.addEventListener('DOMContentLoaded',function(){renderChannels();updateLanguage();});
+        function renderChannels(f=''){const g=document.getElementById('channelGrid');const r=channels.filter(c=>{const t=f.toLowerCase();return c.name.toLowerCase().includes(t)||c.nameEn.toLowerCase().includes(t)||c.num.toString().includes(t);});g.innerHTML=r.map(c=>`<div class="channel-item"><span class="channel-number">${c.num}</span><span class="channel-name">${currentLang==='zh'?c.name:c.nameEn}</span></div>`).join('');}
+        function filterChannels(){renderChannels(document.getElementById('channelSearch').value);}
+        function setLanguage(l){currentLang=l;document.querySelectorAll('.lang-btn').forEach(b=>b.classList.remove('active'));event.target.classList.add('active');updateLanguage();renderChannels(document.getElementById('channelSearch').value);}
+        function updateLanguage(){document.querySelectorAll('[data-zh]').forEach(e=>{e.textContent=currentLang==='zh'?e.dataset.zh:e.dataset.en;});document.querySelectorAll('[data-placeholder-zh]').forEach(e=>{e.placeholder=currentLang==='zh'?e.dataset.placeholderZh:e.dataset.placeholderEn;});}
+        function showSection(s,t){document.querySelectorAll('.section').forEach(x=>x.classList.remove('active'));document.getElementById(s).classList.add('active');document.querySelectorAll('.nav-tab').forEach(x=>x.classList.remove('active'));t.classList.add('active');}
+        function toggleAccordion(h){h.parentElement.classList.toggle('open');}
+    
+        window.addEventListener('scroll',function(){var b=document.getElementById('backToTop');if(window.scrollY>300){b.classList.add('show');}else{b.classList.remove('show');}});
+    </script>
+
+
+
+    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="返回顶部">⬆</button>
+</body></html>
